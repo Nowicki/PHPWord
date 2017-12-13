@@ -26,6 +26,7 @@ interface WriterInterface
      * Save PhpWord to file
      *
      * @param string $filename
+     * @param string $tempDir
      */
-    public function save($filename = null);
+    public function save($filename = null, $tempDir = null);
 }

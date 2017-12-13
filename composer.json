@@ -32,11 +32,12 @@
         }
     ],
     "require": {
-        "php": ">=5.3.3",
+        "php": "^7.1.0",
         "ext-xml": "*",
         "zendframework/zend-escaper": "2.*",
         "zendframework/zend-stdlib": "2.*",
-        "phpoffice/common": "0.2.*"
+        "phpoffice/common": "0.2.*",
+        "mpdf/mpdf": "7.*"
     },
     "require-dev": {
         "phpunit/phpunit": "3.7.*",
@@ -45,8 +46,7 @@
         "phpmd/phpmd": "2.*",
         "phploc/phploc": "2.*",
         "dompdf/dompdf":"0.6.*",
-        "tecnickcom/tcpdf": "6.*",
-        "mpdf/mpdf": "5.*"
+        "tecnickcom/tcpdf": "6.*"
     },
     "suggest": {
         "ext-zip": "Allows writing OOXML and ODF",
