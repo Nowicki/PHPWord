@@ -32,7 +32,7 @@ class MPDF extends AbstractRenderer implements WriterInterface
      *
      * @var string
      */
-    protected $includeFile = 'mpdf.php';
+    protected $mpdfTempDir = '';
 
     /**
      * Save PhpWord to file.
@@ -50,8 +50,8 @@ class MPDF extends AbstractRenderer implements WriterInterface
         $orientation = strtoupper('portrait');
 
         //  Create PDF
-        if ($tempDir) {
-            $config = array('tempDir' => $tempDir);
+        if ($this->mpdfTempDir) {
+            $config = array('tempDir' => $this->mpdfTempDir);
         } else {
             $config = array();
         }
@@ -75,4 +75,10 @@ class MPDF extends AbstractRenderer implements WriterInterface
 
         parent::restoreStateAfterSave($fileHandle);
     }
+
+    public function setMpdfTempDir($tempDir)
+    {
+        $this->mpdfTempDir = $tempDir;
+    }
+
 }
